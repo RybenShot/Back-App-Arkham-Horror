@@ -11,7 +11,9 @@ Retomamos proyecto 29/04/2024
 ## Investigadores
 
 Plantilla:
-<code>
+
+~~~
+
 // Investigadores
 
 {nombrePJ: "Tommy Muldoon",
@@ -87,5 +89,6 @@ Plantilla:
   descripcion:"",
   ENdescripcion:"Talent - Innate. Action: You can perform an action that you have already used in this round. You can use your Velvety Voice to allow another researcher to do this. Once per round, after you spend a Remains tab, you win a Remains tab."
 }
-</code>
+
+~~~
 
