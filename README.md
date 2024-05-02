@@ -136,3 +136,132 @@ Enemigos: [
 ]
 
 ~~~
+
+# Recursos gestionados
+
+- Investigadores
+- Cartas objeto
+- Cartas hechizos
+- Cartas talentos
+- Mapas
+- Enemigos
+
+# Servicios
+
+- Investigadores
+	> seleccionar investigador
+	> buscar por:
+		>> nombre investigador
+		>> arquetipo 
+		>> expansion
+
+- Cartas
+	> buscar por:
+		>> nombre de carta
+		>> tipo de carta (Talento, hechizo, Objeto, empleo, vehiculo, etc)
+
+- Mapas
+	> seleccionar mapa
+	> buscar mapa por:
+		>> nombre de mapa
+		>> expansion 
+
+
+# Modelo datos Recursos
+
+- Investigadores
+  {nombrePJ: "",
+    idPersonaje: 1,
+    posicion: "",
+    ENposicion: "",
+    datosBasicos: {
+      vida: 7,
+      cordura: 5,
+      saber: 2,
+      influencia: 2,
+      observacion: 3,
+      fuerza: 3,
+      voluntad: 3,
+      dinero: 2,
+      restos: 0,
+      limConcentracion: 2,
+      ENlimConcentracion: 2,
+    },
+    efectos: {
+      efecto1:"",
+      ENefecto1: "",
+      efecto2: null,
+    },
+    frase: "“”",
+    ENfrase: '“”',
+    locucionURL: {{Url de la locucion del personaje}},                // la locucioon ahora mismo no se como se guardaria
+    historia:"",
+    ENhistoria: "",
+    arquetipos: {
+      tituloArquetipo1: "",
+      ENtituloArquetipo1:"",
+      descripcionArquetipo1: "",
+      ENdescripcionArquetipo1: "",
+      tituloArquetipo2:"",
+      ENtituloArquetipo2:"",
+      descripcionArquetipo2: "Tu ventaja radica en sobrevivir al implacable asalto de los Mitos y ayudar a tus compañeros investigadores a hacer lo mismo. El trabajo en equipo os conducirá a la victoria.",
+      ENdescripcionArquetipo2: "Your advantage lies in surviving the relentless assault of Myths and helping your fellow researchers do the same. Teamwork will lead you to victory."
+    },
+    Pertenencias: {
+      Pertenencia1: {urlCartaPertenencia: {url}},
+      Pertenencia2: {urlCartaPertenencia: {url}},
+      Pertenencia3: {urlCartaPertenencia: {url}},
+      Pertenencia4: {urlCartaPertenencia: {url}},
+    },
+    fotoUrl: require("@/assets/img/1-Personajes/1-Tommy.jpg"),
+    expansion: "Base"
+  },
+# Rutas API 
+
+- Investigadores
+	> GET			/investigadores							// para ver a todos los investigadores en una lista completa
+	> GET			/investigadores/:investigadorId			// para buscar 1 investigador concreto
+	> POST			/investigadores							// para crear un investigador
+	> PUT 			/investigadores/:investigadorId			// para editar un investigador concreto
+	> DELETE		/investigadores/:investigadorId			// para borrar un investigador concreto
+
+- Cartas
+	> GET			/cartas
+	> GET			/cartas/:cartaID
+	> POST			/cartas
+	> PUT			/cartas/:cartaId
+	> DELETE		/cartas/:cartaId
+
+- Mapas
+	> GET			/mapas
+	> GET			/mapas/:mapaId
+	> POST			/mapas
+	> PUT			/mapas/:mapaId
+	> DELETE		/mapas/:mapaId
+
+- Enemigos
+	> GET			/mapas/:mapaId
+	> POST			/mapas
+	> PUT			/mapas/:mapaId
+	> DELETE		/mapas/:mapaId
+
+# Definicion Peticiones/Respuestas
+
+- Investigadores
+	> GET			/investigadores
+	> GET			/investigadores/:investigadorId
+	> POST			/investigadores
+	PETICION		
+	{
+		nombrePJ: "Bodil",
+    	idPersonaje: 1,
+    	posicion: "Periodista"
+	}
+	REPUESTA		201
+	{
+		nombrePJ: "Bodil",
+    	idPersonaje: 1,
+    	posicion: "Periodista"
+	}
+	> PUT 			/investigadores/:investigadorId
+	> DELETE		/investigadores/:investigadorId
