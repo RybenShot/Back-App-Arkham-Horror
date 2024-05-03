@@ -1,19 +1,17 @@
 'use strict'
-
 const express = require('express')
 const router = express.Router()
-
-const InvestigatorModel = require('../models/InvestigatorModel')
+// por alguna razon cuando pongo bien el nombre de "investigatorModel", la "i" minuscula, el editor de codigo me lo detecta como mal ...
+const investigatorModel = require ('../models/InvestigatorModel')
 
 const UIGenerator = require('uid-generator');
 const uidgen = new UIGenerator();
 
 //        BUSQUEDAS GLOBALES (LISTAS)           //
-
 router.route('/investigators')
   //! Lista de todos los Investigadores
   .get((req, res) => {
-    res.json(InvestigatorModel.list())
+    res.json(investigatorModel.list())
   })
 
   //! Añadir/Crear un nuevo investigador
@@ -27,18 +25,17 @@ router.route('/investigators')
     nuevoInvestigador.investigadorId = await uidgen.generate()
 
     //? Metemos el investigador en la lista de "listaInvestigadores"
-    InvestigatorModel.add(nuevoInvestigador)
+    investigatorModel.add(nuevoInvestigador)
 
     res.status(201).json(nuevoInvestigador)
   })
 
   //        BUSQUEDAS CONCRETAS               //
-
   router.route('/investigators/:investigadorId')
     //! BUSCA un investigador concreto por "ID"
     .get((req, res) => {
       //? Me traigo la lista de investigadores ...
-      let getListaInvestigadores = InvestigatorModel.list()
+      let getListaInvestigadores = investigatorModel.list()
       //? recogemos los parametros de busqueda(concretamente la id)
       const getInvestigadorId = req.params.investigadorId
 
@@ -57,7 +54,7 @@ router.route('/investigators')
 
     //! EDITA un investigador concreto por "ID"
     .put((req, res) => {
-      let getListaInvestigadores = InvestigatorModel.list()
+      let getListaInvestigadores = investigatorModel.list()
       const putInvestigadorId = req.params.investigadorId
       //? OJO <-- Aqui buscamos la POSICION donde hayamos encontrado al investigador (para posteriormente editarlo)
       //                        |                            |
@@ -74,14 +71,14 @@ router.route('/investigators')
       //? juntamos lo que habia en esa posicion mas lo que nos han enviado por parametros YYY guardamos en el mismo sitio donde se ha encontrado al investigador (termianndo de editar asi el investigador correctamente dentro del array de listaInvestigadores)
       getListaInvestigadores[foundInvestigadorIndex] = {... getListaInvestigadores[foundInvestigadorIndex], ...req.body}
       //!! Quito la linea de abajo porque ahora mismo nose para que puede servir, esta copiado del mock de pizza, en los productos, se supone que es apra la edicion del investigador en este caso, epro solo con la linea superior es suficiente
-      //InvestigatorModel.edit(foundInvestigadorIndex, getListaInvestigadores[foundInvestigadorIndex])
+      //investigatorModel.edit(foundInvestigadorIndex, getListaInvestigadores[foundInvestigadorIndex])
 
       res.json(getListaInvestigadores[foundInvestigadorIndex])
     })
 
     //! ELIMINA un investigador concreto por "ID"
     .delete((req, res) => {
-      let getListaInvestigadores = InvestigatorModel.list()
+      let getListaInvestigadores = investigatorModel.list()
       const deleteInvestigadorId = req.params.investigadorId
 
       const foundInvestigadorIndex = getListaInvestigadores.findIndex((investigador) => investigador.investigadorId === deleteInvestigadorId)
@@ -91,7 +88,7 @@ router.route('/investigators')
         return
       }
       //? Aqui es donde borramos al investigador con la ayuda de la posicion que proporciona "foundInvestigadorIndex"
-      InvestigatorModel.remove(foundInvestigadorIndex)
+      investigatorModel.remove(foundInvestigadorIndex)
       //!! Abajo, version antigua
       //getListaInvestigadores.splice(foundInvestigadorIndex, 1)
 

@@ -130,7 +130,7 @@ Mapas: [
 Enemigos: [
   {idEnemigo: 0,
     url: require("url"),
-    ENnombreEnemigo: "Hooded marauder", 
+    ENnombreEnemigo: "Hooded marauder",
     ESnombreEnemigo: "Merodeador encapuchado"
   },
 ]
@@ -152,7 +152,7 @@ Enemigos: [
 	> seleccionar investigador
 	> buscar por:
 		>> nombre investigador
-		>> arquetipo 
+		>> arquetipo
 		>> expansion
 
 - Cartas
@@ -164,7 +164,7 @@ Enemigos: [
 	> seleccionar mapa
 	> buscar mapa por:
 		>> nombre de mapa
-		>> expansion 
+		>> expansion
 
 
 # Modelo datos Recursos
@@ -216,7 +216,7 @@ Enemigos: [
     fotoUrl: require("@/assets/img/1-Personajes/1-Tommy.jpg"),
     expansion: "Base"
   },
-# Rutas API 
+# Rutas API
 
 - Investigadores
 	> GET			/investigadores							// para ver a todos los investigadores en una lista completa
@@ -251,7 +251,7 @@ Enemigos: [
 	> GET			/investigadores
 	> GET			/investigadores/:investigadorId
 	> POST			/investigadores
-	PETICION		
+	PETICION
 	{
 		nombrePJ: "Bodil",
     	idPersonaje: 1,
