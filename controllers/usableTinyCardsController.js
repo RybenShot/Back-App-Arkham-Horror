@@ -52,4 +52,23 @@ router.route('/cards/search/:title')
   }
   res.json(foundCard)
 })
+
+//          BUSQUEDA CONCRETA (POR ID DE CARTA)
+router.route('/cards/findById/:cardId')
+.put((req, res) => {
+  let getListCards = cardsModel.list()
+  let putCardId = req.params.cardId
+
+  const foundCardIndex = getListCards.findIndex((card) => card.idCard === putCardId)
+
+  if(foundCardIndex === -1){
+    res.status(404).json({message: `carta no encontrada`})
+    return
+  }
+
+  getListCards[foundCardIndex] = {...getListCards[foundCardIndex], ...req.body}
+
+  res.json(getListCards[foundCardIndex])
+})
+
 module.exports = router
