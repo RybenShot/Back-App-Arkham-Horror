@@ -5,16 +5,17 @@ const router = express.Router()
 const investigatorModel = require ('../models/InvestigatorModel')
 
 const UIGenerator = require('uid-generator');
+const { get } = require('./usableTinyCardsController');
 const uidgen = new UIGenerator();
 
 //        BUSQUEDAS GLOBALES (LISTAS)           //
 router.route('/investigators')
-  //! Lista de todos los Investigadores
+  //! LISTAR todos los Investigadores
   .get((req, res) => {
     res.json(investigatorModel.list())
   })
 
-  //! Añadir/Crear un nuevo investigador
+  //! CREAR un nuevo investigador
   .post(async (req, res) => {
     let nuevoInvestigador = req.body
     //? reseteamos lo que haya en "expansion" por "desconocido", quitando lo que haya enviado por post
@@ -28,6 +29,36 @@ router.route('/investigators')
     investigatorModel.add(nuevoInvestigador)
 
     res.status(201).json(nuevoInvestigador)
+  })
+
+  //        BUSCA UN INVESTIGADOR POR DATOS CONCRETOS
+  router.route('/investigators/searchArquetipe/:arquetipe')
+    //! LISTA  TODOS los investigadores que coincidan con este arquetipo
+    .get((req, res) => {
+      let getListaInvestigadores = investigatorModel.list()
+      const getInvestigadorArquetipe = req.params.arquetipe
+      let foundInvestigators = []
+
+      for (let i = 0; i < getListaInvestigadores.length; i++) {
+        if (getListaInvestigadores[i].arquetipo.includes(getInvestigadorArquetipe)) {
+          foundInvestigators.push(getListaInvestigadores[i])
+        }
+      }
+      res.json(foundInvestigators)
+    })
+
+    //! BUSCA un investigador por el nombre
+  router.route('/investigators/searchByName/:nameInvestigator')
+  .get((req, res) => {
+    let getListaInvestigadores = investigatorModel.list()
+    const getInvestigadorName = req.params.nameInvestigator
+
+    let foundInvestigator = getListaInvestigadores.find((investigator) => investigator.nombreInvestigador == getInvestigadorName)
+    if (!foundInvestigator) {
+      res.status(404).json({messaje: `investigador no encontrado al buscar por nombre`})
+      return
+    }
+    res.json(foundInvestigator)
   })
 
   //        BUSQUEDAS CONCRETAS               //
