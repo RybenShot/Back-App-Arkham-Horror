@@ -5,9 +5,10 @@ const express = require('express')
 //const cors = require("cors");
 
 //middlewares con las rutas
-const InvestigatorController = require('./controllers/InvestigatorsController')
+const InvestigatorController = require('./controllers/investigatorsController')
 const MapsController = require('./controllers/mapsController')
 const CardsController = require('./controllers/usableTinyCardsController')
+const EnemiesController = require('./controllers/enemiesController')
 // const indexController = require('./controllers/IndexController')
 
 //server instance
@@ -23,6 +24,7 @@ app.use(express.json())
 app.use(InvestigatorController)
 app.use(MapsController)
 app.use(CardsController)
+app.use(EnemiesController)
 
 // Conectamos a la base de datos de mongoDb
 //database.connect()
