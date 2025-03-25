@@ -2,10 +2,8 @@
 GET https://api-arkhamhorror-dev.up.railway.app/
 
 ### Retorna el número de visitas totales a la app
-GET https://api-arkhamhorror-dev.up.railway.app/visitas
+GET https://api-arkhamhorror-dev.up.railway.app/visits
 
 ### Suma 1 al contador de visitas
-POST https://api-arkhamhorror-dev.up.railway.app/visitas
+POST https://api-arkhamhorror-dev.up.railway.app/visits
 
-### Trae la lista de LOGS
-GET https://api-arkhamhorror-dev.up.railway.app/logs

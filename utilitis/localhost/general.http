@@ -7,6 +7,4 @@ GET http://localhost:1234/visits
 ### Suma 1 al contador de visitas
 POST http://localhost:1234/visits
 
-### Trae la lista de LOGS
-GET http://localhost:1234/logs
 
