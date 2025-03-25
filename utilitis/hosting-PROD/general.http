@@ -6,3 +6,6 @@ GET https://api-arkhamhorror.up.railway.app/visitas
 
 ### Suma 1 al contador de visitas
 POST https://api-arkhamhorror.up.railway.app/visitas
+
+### Trae la lista de LOGS
+GET https://api-arkhamhorror.up.railway.app/logs
