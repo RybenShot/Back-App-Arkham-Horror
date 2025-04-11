@@ -1,5 +1,7 @@
 import { MapModel } from "../models/maps_model.js";
 import { validateMap, validatePartialMap } from '../schemas/maps_schema.js'
+// por limpieza de codigo, esta importacion de kscoon deberiamos hacerla en el model pero lo dejamos asi pr ahora para atender otros asuntos
+import listPreviewMaps from '../databaseJSON/previewMaps.json' with { type: "json" }
 
 
 export class MapsController {
@@ -8,6 +10,22 @@ export class MapsController {
         const { expansion } = req.query
         const maps = await MapModel.getAll({ expansion })
         res.json(maps)
+    }
+
+    static getPreviewMap (req, res) {
+        res.json(listPreviewMaps)
+    }
+
+    static async getAllEnemies (req, res){
+        // capturamos la id
+        const { id } = req.params
+        let listEnemies = await MapModel.getAllEnemies({ id })
+        // si no hay enemigos, devolvemos un mensaje
+        if (listEnemies.length === 0) {
+            return res.status(404).json({ message: 'No se han encontrado enemigos para el mapa solicitado' })
+        }
+
+        res.json(listEnemies)
     }
 
     // retornamos un mapa por su id
@@ -20,6 +38,8 @@ export class MapsController {
         res.status(404).json({ message: 'Mapa no encontrado' })
     }
 
+    // Desabilitamos por ahora estas opciones para evitar problemas
+    /*
     // creamos un nuevo mapa
     static async createNewMap(req, res) {
         const result = validateMap(req.body)
@@ -56,4 +76,5 @@ export class MapsController {
     
         return res.json(updateMap)
     }
+        */
 }
