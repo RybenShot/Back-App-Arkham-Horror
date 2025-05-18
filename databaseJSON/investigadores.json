@@ -52,12 +52,12 @@
         "locutionURL": "___",
         "rol": [
           {
-            "rol": "Defensor",
-            "description": "Tu responsabilidad consiste en proteger a tus compañeros investigadores. Esto podría significar ayudarles a recuperarse de daños físicos y mentales, o bien despachar Monstruos antes de que se conviertan en una amenaza."
+            "rol": "___",
+            "description": "___"
           },
           {
-            "rol": "Superviviente",
-            "description": "Tu ventaja radica en sobrevivir al implacable asalto de los Mitos y ayudar a tus compañeros investigadores a hacer lo mismo. El trabajo en equipo os conducirá a la victoria."
+            "rol": "___",
+            "description": "___"
           }
         ]
       }
