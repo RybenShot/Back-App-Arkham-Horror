@@ -51,6 +51,28 @@ export class InvController {
         res.status(404).json({ message: 'Investigador no encontrado' })
     }
 
+    // retornamos likes dislikes de un investigador
+    static async getLikeDislike (req, res) {
+        const { id } = req.params
+
+        const findMap = await InvModel.getLikeDislike( id )
+        if (findMap) return res.json(findMap)
+
+        res.status(404).json({ message: 'Investigador no encontrado' })
+    }
+
+    // sistema de votacion de like dislike de Usuario
+    static async likeDislike (req, res) {
+        const { idInv, idUser, value} = req.body
+
+
+        const mapEdited = await InvModel.likeDislike({ idInv, idUser, value })
+
+        if (!mapEdited) return res.status(404).json({ message: 'Investigador no encontrado' })
+        
+        return res.json(mapEdited)
+    }
+
     static async createInv(req, res) {
         const result = validateInv(req.body)
         
@@ -61,6 +83,43 @@ export class InvController {
         const newInv = await InvModel.createInv({input: result.data})
     
         res.status(201).json(newInv)
+    }
+
+    // get de los comentarios de un mapa
+    static async getComments (req, res) {
+        try {
+            const { id } = req.params
+            console.log('🔍 --- getComments --- recibid:', id);
+
+            const findInv = await InvModel.getComments( id )
+            if (!findInv) {
+                return res.status(404).json({ message: 'Investigador no encontrado' })
+            } 
+
+            res.status(202).json(findInv)
+        } catch (error) {
+            console.error('❌ getComments error :', error);
+            return res.status(500).json({ message: 'Error interno' }); 
+        }
+    }
+
+    // post para comentario sobre un mapa
+    static async postComment (req, res){
+        try {
+            const { idInv, idUser, comment} = req.body
+            console.log('🔍 --- postComment --- recibid:', { idInv, idUser, comment });
+
+            const invEdited = await InvModel.postComment({idInv, idUser, comment})
+
+            if (!invEdited) return res.status(404).json({ message: 'Investigador no encontrado' })
+            
+            res.status(202).json(invEdited)
+        } catch (error) {
+            console.error('❌ postComment error :', error);
+            return res.status(500).json({ message: 'Error interno' });
+        }
+        
+
     }
 
     static async deleteInv (req, res){
