@@ -1489,5 +1489,236 @@
                 "img": "/img/2-obj/es_PerNameless3.jpg"
             }
         }
+    },
+    {"id": 129,
+        "name": "My Mother's Revolver",
+        "description": "+4 STRENGTH. If the investigator has less than 3 STRENGTH, they must roll a die when shooting; this is the damage the bearer suffers due to recoil.",
+        "img": "/img/2-obj/PerLola1.jpg",
+        "expansion": "original",
+        "translations": {
+            "es": {
+                "name": "Revólver de mi madre",
+                "description": "+4 a FUERZA. Si el investigador tiene menos de 3 de FUERZA, al disparar deberá lanzar un dado; este será el daño que sufra el portador por el retroceso.",
+                "img": "/img/2-obj/PerLola1.jpg"
+            }
+        }
+    },
+    {"id": 130,
+        "name": "Hidden Dagger",
+        "description": "+1 hit when using it against an attacker. +1 die if used for a test requiring INFLUENCE.",
+        "img": "/img/2-obj/PerLola2.jpg",
+        "expansion": "original",
+        "translations": {
+            "es": {
+                "name": "Navaja oculta",
+                "description": "+1 acierto al usarla contra un atacante. +1 DADO si se usa para una prueba que requiera INFLUENCIA.",
+                "img": "/img/2-obj/PerLola2.jpg"
+            }
+        }
+    },
+    {"id": 131,
+        "name": "Luxurious Trench Coat",
+        "description": "A slightly scruffy trench coat, but it still has details suggesting it’s a valuable garment—thick and warm. It holds an empty black velvet pouch in one of its pockets.",
+        "img": "/img/2-obj/PerLola3.jpg",
+        "expansion": "original",
+        "translations": {
+            "es": {
+                "name": "Gabardina lujosa",
+                "description": "Una gabardina un poco desaliñada, pero que aún conserva detalles que indican ser una prenda de valor, gruesa y caliente. Guarda una bolsa vacía de terciopelo negro en uno de sus bolsillos.",
+                "img": "/img/2-obj/PerLola3.jpg"
+            }
+        }
+    },
+
+    {"id": 132,
+        "name": "Old War Revolver",
+        "description": "When you perform an attack action, roll a die; if it comes up even, you gain +3 STRENGTH. If it comes up odd, the weapon jams and you gain no bonus.",
+        "img": "/img/2-obj/PerWilliam1.jpg",
+        "expansion": "original",
+        "translations": {
+            "es": {
+                "name": "Revolver viejo de la guerra",
+                "description": "Cuando estés realizando una acción de ataque tira un dado; si sale par, recibes +3 de FUERZA, si sale impar, se te encasquilla el arma y no se suma ningún bonificador.",
+                "img": "/img/2-obj/es_PerWilliam1.jpg"
+            }
+        }
+    },
+    {"id": 133,
+        "name": "Old Motorcycle",
+        "description": "Instead of moving, advance up to 3 spaces. If you pass through a non‑epic enemy, deal 1 damage to it and the motorcycle loses 2 health points.",
+        "img": "/img/2-obj/PerWilliam2.jpg",
+        "expansion": "original",
+        "translations": {
+            "es": {
+                "name": "Moto vieja",
+                "description": "En lugar de moverte, avanza hasta 3 casillas. Si atraviesas a un enemigo no épico, inflige 1 daño y la moto pierde 2 puntos de vida.",
+                "img": "/img/2-obj/es_PerWilliam2.jpg"
+            }
+        }
+    },
+    {"id": 134,
+        "name": "Let's Enjoy the Moment",
+        "description": "At the beginning of your turn, you may become delayed alone or with another investigator to gain 2 life and 2 sanity.",
+        "img": "/img/2-obj/PerWilliam3.jpg",
+        "expansion": "original",
+        "translations": {
+            "es": {
+                "name": "Difrutemos del momento",
+                "description": "Al principio del turno, puedes quedar rezagado solo o junto con algún otro investigador para conseguir 2 puntos de vida y 2 de cordura.",
+                "img": "/img/2-obj/es_PerWilliam3.jpg"
+            }
+        }
+    },
+
+    {"id": 1291,
+        "img": "",
+        "expansion": "original",
+        "price": null,
+        "types": ["perInicial", "objeto", "especial", "arma"],
+        "hands": 2,
+        "health": {
+            "life": null,
+            "sanity": null
+        },
+        "cost": {
+            "life": null,
+            "sanity": null
+        },
+        "translations": {
+            "es": {
+                "name": "Revólver de mi madre",
+                "description": "+4 a FUERZA. Si el investigador tiene menos de 3 de FUERZA, al disparar deberá lanzar un dado; este será el daño que sufra el portador por el retroceso."
+            },
+            "en": {
+                "name": "My Mother's Revolver",
+                "description": "+4 STRENGTH. If the investigator has less than 3 STRENGTH, they must roll a die when shooting; this is the damage the bearer suffers due to recoil."
+            }
+        }
+    },
+
+    {"id": 1301,
+        "img": "",
+        "expansion": "original",
+        "price": null,
+        "types": ["perInicial", "", ""],
+        "hands": 1,
+        "health": {
+            "life": null,
+            "sanity": null
+        },
+        "cost": {
+            "life": null,
+            "sanity": null
+        },
+        "translations": {
+            "es": {
+                "name": "Navaja oculta",
+                "description": "+1 acierto al usarla contra un atacante. +1 DADO si se usa para una prueba que requiera INFLUENCIA."
+            },
+            "en": {
+                "name": "___",
+                "description": "___"
+            }
+        }
+    },
+    {"id": 1311,
+        "img": "",
+        "expansion": "original",
+        "price": null,
+        "types": ["perInicial", "", ""],
+        "hands": null,
+        "health": {
+            "life": 4,
+            "sanity": null
+        },
+        "cost": {
+            "life": null,
+            "sanity": null
+        },
+        "translations": {
+            "es": {
+                "name": "Gabardina lujosa",
+                "description": "Una gabardina un poco desaliñada, pero que aún conserva detalles que indican ser una prenda de valor, gruesa y caliente. Guarda una bolsa vacía de terciopelo negro en uno de sus bolsillos."
+            },
+            "en": {
+                "name": "Luxurious Trench Coat",
+                "description": "A slightly scruffy trench coat, but it still has details suggesting it’s a valuable garment—thick and warm. It holds an empty black velvet pouch in one of its pockets."
+            }
+        }
+    },
+    {"id": 1321,
+        "img": "",
+        "expansion": "original",
+        "price": null,
+        "types": ["perInicial", "", ""],
+        "hands": 1,
+        "health": {
+            "life": null,
+            "sanity": null
+        },
+        "cost": {
+            "life": null,
+            "sanity": null
+        },
+        "translations": {
+            "es": {
+                "name": "Revolver viejo de la guerra",
+                "description": "Cuando estés realizando una accion de ataque Tira un dado, si sale par, recibes +3 de FUERZA ,si sale inpar, se te encasquilla el arma, no se suma ningun bonificador. "
+            },
+            "en": {
+                "name": "___",
+                "description": "___"
+            }
+        }
+    },
+    {"id": 1331,
+        "img": "",
+        "expansion": "original",
+        "price": null,
+        "types": ["perInicial", "objeto", "Especial", "vehiculo"],
+        "hands": null,
+        "health": {
+            "life": 5,
+            "sanity": null
+        },
+        "cost": {
+            "life": null,
+            "sanity": null
+        },
+        "translations": {
+            "es": {
+                "name": "Moto vieja.",
+                "description": "En lugar de moverte, avanza hasta 3 casillas. Si atraviesas a un enemigo no épico, inflige 1 daño y la moto pierde 2 puntos vida."
+            },
+            "en": {
+                "name": "___",
+                "description": "___"
+            }
+        }
+    },
+    {"id": 1341,
+        "img": "",
+        "expansion": "original",
+        "price": null,
+        "types": ["perInicial", "", ""],
+        "hands": null,
+        "health": {
+            "life": null,
+            "sanity": null
+        },
+        "cost": {
+            "life": null,
+            "sanity": null
+        },
+        "translations": {
+            "es": {
+                "name": "Difrutemos del momento.",
+                "description": "Al princicio del turno, puedes quedar rezagado solo o junto con algun otro investigador para conseguir 2 puntos de vida y cordura. "
+            },
+            "en": {
+                "name": "___",
+                "description": "___"
+            }
+        }
     }
 ]

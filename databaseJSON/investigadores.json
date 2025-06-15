@@ -3232,8 +3232,8 @@
     "name": "Lola",
     "position": "Prostituta",
     "effect1": "Noche de trabajo: en cada fase de encuentros puedes conseguir 4 dólares, pero al final debes tirar un dado; el resultado menos 1 será la vida que pierdes.",
-    "effect2": null,
-    "effect3": null,
+    "effect2": "Voluntad inquebrantable (1 solo uso). Si el investigador fuera a morir, ya sea por perdida de vida o cordura, inmediatamente recupera 3 puntos de vida y cordura, pero gana un pacto siniestro.",
+    "effect3": "Contactos de bajos fondos. 1 vez por turno, el investigador puede pagar 1 dolar para moverse hasta 3 espacios.",
     "phrase": "'La noche pertenece a las sombras.'",
     "theStory": "Lola nunca olvidará la noche en que su madre murió. Tenía 17 años y acababa de cerrar la puerta de su piso cuando escuchó un portazo en el cuartucho contiguo, el “lugar de trabajo” de su madre. Tras un silencio sepulcral salió al pasillo y, al no encontrarla, corrió al callejón donde se había formado una turba horrorizada: gritos, vómitos y rostros desencajados. Al asomarse vio el cuerpo de su madre convertido en una grotesca sopa de órganos y sangre. En su mano izquierda brillaba aún una pequeña bolsita de tela negra, rota y vacía, y faltaba el reloj de oro de 13 horas que le había regalado. Entonces sintió, por un instante, una presencia oscura al fondo del callejón: la forma amorfa de un demonio. Desde ese día, Lola sabe que hay fuerzas terribles tras el velo de lo humano, y que ella sola debe valerse en un mundo que apenas la considera algo más que un objeto. ",
     "focusLimit": 2,
@@ -3242,12 +3242,12 @@
     "atributes": {
       "life": 6,
       "sanity": 6,
-      "lore": 3,
-      "influence": 4,
+      "lore": 2,
+      "influence": 3,
       "observation": 4,
-      "strength": 3,
-      "will": 3,
-      "money": 3,
+      "strength": 2,
+      "will": 2,
+      "money": 2,
       "remnant": 0,
       "clue": 0
     },
@@ -3263,13 +3263,12 @@
     ],
     "possessions": {
       "required": [
-        70,
-        71
+        129
       ],
       "optionalText": "Puedes elegir uno de los siguientes objetos",
       "optional": [
-        72,
-        73
+        130,
+        131
       ]
     },
     "extraData": {
@@ -3282,8 +3281,8 @@
         "name": "Lola",
         "position": "Prostituta",
         "effect1": "Noche de trabajo: en cada fase de encuentros puedes conseguir 4 dólares, pero al final debes tirar un dado; el resultado menos 1 será la vida que pierdes.",
-        "effect2": null,
-        "effect3": null,
+        "effect2": "Voluntad inquebrantable (1 solo uso). Si el investigador fuera a morir, ya sea por perdida de vida o cordura, inmediatamente recupera 3 puntos de vida y cordura, pero gana un pacto siniestro.",
+        "effect3": "Contactos de bajos fondos. 1 vez por turno, el investigador puede pagar 1 dolar para moverse hasta 3 espacios.",
         "phrase": "'La noche pertenece a las sombras.'",
         "theStory": "Lola nunca olvidará la noche en que su madre murió. Tenía 17 años y acababa de cerrar la puerta de su piso cuando escuchó un portazo en el cuartucho contiguo, el “lugar de trabajo” de su madre. Tras un silencio sepulcral salió al pasillo y, al no encontrarla, corrió al callejón donde se había formado una turba horrorizada: gritos, vómitos y rostros desencajados. Al asomarse vio el cuerpo de su madre convertido en una grotesca sopa de órganos y sangre. En su mano izquierda brillaba aún una pequeña bolsita de tela negra, rota y vacía, y faltaba el reloj de oro de 13 horas que le había regalado. Entonces sintió, por un instante, una presencia oscura al fondo del callejón: la forma amorfa de un demonio. Desde ese día, Lola sabe que hay fuerzas terribles tras el velo de lo humano, y que ella sola debe valerse en un mundo que apenas la considera algo más que un objeto.",
         "focusLimit": 2,
@@ -3308,7 +3307,7 @@
     "name": "William O'Donel",
     "position": "Detective Privado",
     "effect1": "Recoge lo que siembras: tras cada encuentro puedes gastar 1 concentración para repetir cualquier prueba; si lo haces, recibes 1 punto de horror.",
-    "effect2": null,
+    "effect2": "Estrés postraumatico. Si el investigador baja a 2 puntos o menos de cordura su fuerza se incrementa en 6 , pero tendra el efecto 'Paranoia'. Cuando el investigador supere 2 puntos de cordura, su fuerza vuelve a ser la normal, pero el efecto de paranoia seguiirá vijente hasta que diga al carta.",
     "effect3": null,
     "phrase": "'Todo fin justifica los medios.'",
     "theStory": "William O'Donel sirvió en la Gran Guerra, donde vio horrores que marcaron su cuerpo y su mente. Sobrevivió al fuego enemigo, a los ácidos que le quemaron el brazo derecho y al hambre: las ratas devoraban a sus compañeros caídos. Al volver a Arkham, encontró consuelo en resolver pequeños casos para gente adinerada… hasta que una noche descubrió a Rex Murphy y Rosalín Parks urdiendo negocios turbios en los bajos fondos. Con contactos en la universidad y en los tugurios, William se ganó pronto fama de implacable: aplica su propia ley en su oficina junto al Memorial de Arkham, donde guarda con celo una fotografía de su camarada muerto mirando al horizonte. En una ocasión se enfrentó a un culto de ghouls en un desván y se topó con un oráculo del caos que le dejó el “sacrificio” marcado en el pecho. Desde entonces, avanza frío y calculador, convencido de que cada caso podría ser el ultimo.",
@@ -3318,10 +3317,10 @@
     "atributes": {
       "life": 6,
       "sanity": 4,
-      "lore": 4,
+      "lore": 2,
       "influence": 2,
-      "observation": 4,
-      "strength": 3,
+      "observation": 3,
+      "strength": 4,
       "will": 2,
       "money": 3,
       "remnant": 0,
@@ -3339,12 +3338,12 @@
     ],
     "possessions": {
       "required": [
-        74
+        132
       ],
       "optionalText": "Puedes elegir uno de los siguientes objetos",
       "optional": [
-        75,
-        76
+        133,
+        134
       ]
     },
     "extraData": {
@@ -3357,7 +3356,7 @@
         "name": "William O'Donel",
         "position": "Detective Privado",
         "effect1": "Recoge lo que siembras: tras cada encuentro puedes gastar 1 concentración para repetir cualquier prueba; si lo haces, recibes 1 punto de horror.",
-        "effect2": null,
+        "effect2": "Estrés postraumatico. Si el investigador baja a 2 puntos o menos de cordura su fuerza se incrementa en 6 , pero tendra el efecto 'Paranoia'. Cuando el investigador supere 2 puntos de cordura, su fuerza vuelve a ser la normal, pero el efecto de paranoia seguiirá vijente hasta que diga al carta.",
         "effect3": null,
         "phrase": "'Todo fin justifica los medios.'",
         "theStory": "William O'Donel sirvió en la Gran Guerra, donde vio horrores que marcaron su cuerpo y su mente. Sobrevivió al fuego enemigo, a los ácidos que le quemaron el brazo derecho y al hambre: las ratas devoraban a sus compañeros caídos. Al volver a Arkham, encontró consuelo en resolver pequeños casos para gente adinerada… hasta que una noche descubrió a Rex Murphy y Rosalín Parks urdiendo negocios turbios en los bajos fondos. Con contactos en la universidad y en los tugurios, William se ganó pronto fama de implacable: aplica su propia ley en su oficina junto al Memorial de Arkham, donde guarda con celo una fotografía de su camarada muerto mirando al horizonte. En una ocasión se enfrentó a un culto de ghouls en un desván y se topó con un oráculo del caos que le dejó el “sacrificio” marcado en el pecho. Desde entonces, avanza frío y calculador, convencido de que cada acción tendrá su consecuencia.",
